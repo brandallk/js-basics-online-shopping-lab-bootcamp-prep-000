@@ -3,9 +3,9 @@ var cart = [];
 // Modify the cart's item objects to make them easier to work with
 function modifyCart(cart) {
   var modified = [];
-  for (let itemIndex = 0; itemIndex < cart.length; itemIndex++) {
-    var itemName = Object.keys(cart[itemIndex])[0];
-    var price = cart[itemIndex][itemName];
+  for (let i = 0; i < cart.length; i++) {
+    var item = Object.keys(cart[i])[0];
+    var price = cart[i][item];
     restructured.push({
       item: itemName,
       price: price
