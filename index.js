@@ -28,10 +28,13 @@ function viewCart() {
     for (let itemIndex = 0; itemIndex < cart.length; itemIndex++) {
       var itemName = Object.keys(cart[itemIndex])[0];
       var price = cart[itemIndex][itemName];
-      if (itemIndex === 1) {
-        tally += `${itemName} at $${price}`.;
-      } else if (itemIndex === lastIndex) {
-        tally += `and ${itemName} at $${price}.`;
+      
+      if (itemIndex === lastIndex) {
+        tally += `${itemName} at $${price}.`;
+      } else if (itemIndex === lastIndex - 1) {
+        tally += `${itemName} at $${price}, and`;
+      } else {
+        tally += `${itemName} at $${price}, `.;
       }
     }
     
