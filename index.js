@@ -43,8 +43,6 @@ function viewCart() {
 }
 
 addToCart('apple');
-addToCart('pear');
-addToCart('orange');
 viewCart();
 
 function total() {
