@@ -38,8 +38,8 @@ function viewCart() {
     var tally = "In your cart, you have ";
     var lastIndex = cart.length - 1;
     for (let itemIndex = 0; itemIndex < cart.length; itemIndex++) {
-      var itemName = restructuredCart(cart)[itemIndex].item;
-      var price = restructuredCart(cart)[itemIndex].price;
+      var itemName = restructureCart(cart)[itemIndex].item;
+      var price = restructureCart(cart)[itemIndex].price;
       if (itemIndex === lastIndex) {
         tally += `${itemName} at $${price}.`;
       } else if (itemIndex === lastIndex - 1) {
