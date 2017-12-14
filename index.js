@@ -30,7 +30,11 @@ function viewCart() {
       if (itemIndex === lastIndex) {
         tally += `${itemName} at $${price}.`;
       } else if (itemIndex === lastIndex - 1) {
-        tally += `${itemName} at $${price} and `;
+        if (cart.length === 2) {
+          tally += `${itemName} at $${price} and `;
+        } else {
+          tally += `${itemName} at $${price}, and `;
+        }
       } else {
         tally += `${itemName} at $${price}, `;
       }
