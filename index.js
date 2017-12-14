@@ -2,7 +2,7 @@ var cart = [];
 
 // Modify the cart's item objects to make them easier to work with
 function modifyCart(cart) {
-  var restructured = [];
+  var modified = [];
   for (let itemIndex = 0; itemIndex < cart.length; itemIndex++) {
     var itemName = Object.keys(cart[itemIndex])[0];
     var price = cart[itemIndex][itemName];
@@ -11,7 +11,7 @@ function modifyCart(cart) {
       price: price
     });
   }
-  return restructured;
+  return modified;
 }
 
 function getCart() {
