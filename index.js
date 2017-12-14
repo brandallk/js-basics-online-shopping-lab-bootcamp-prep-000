@@ -27,7 +27,7 @@ function viewCart() {
     
     for (let itemIndex = 0; itemIndex < cart.length; itemIndex++) {
       var itemName = Object.keys(cart[itemIndex])[0];
-      var price = itemName[itemName];
+      var price = cart[itemIndex][itemName];
       tally += `${itemName} at $${price}`;
       if (itemIndex === lastIndex) {
         tally += ".";
