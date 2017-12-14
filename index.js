@@ -6,7 +6,7 @@ function modifyCart(cart) {
   for (let i = 0; i < cart.length; i++) {
     var item = Object.keys(cart[i])[0];
     var price = cart[i][item];
-    restructured.push(
+    modified.push(
       { item: itemName,
         price: price }
     );
