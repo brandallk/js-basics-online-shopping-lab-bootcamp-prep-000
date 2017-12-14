@@ -58,7 +58,7 @@ function restructuredCart(cart) {
 function total() {
   return restructuredCart(cart).reduce( function(acc, item) {
     return acc + item.price; 
-  });
+  }, 0);
 }
 
 function removeFromCart(item) {
