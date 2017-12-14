@@ -64,9 +64,33 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // write your code here
+  var cartItems = modifyCart(cart).map( function(item) {
+    return item.item;
+  });
+  if ((var index = cartItems.indexOf(item)) !== -1) {
+    cart.splice(index, 1);
+  } else {
+    console.log("That item is not in your cart.");
+  }
+  return cart;
 }
 
 function placeOrder(cardNumber) {
   // write your code here
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
