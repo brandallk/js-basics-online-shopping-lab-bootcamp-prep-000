@@ -18,7 +18,9 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // write your code here
+  if (cart.length === 0) {
+    
+  }
 }
 
 function total() {
