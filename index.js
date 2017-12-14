@@ -43,9 +43,14 @@ function viewCart() {
 }
 
 function restructuredCart(cart) {
+  var restructured = [];
   for (let itemIndex = 0; itemIndex < cart.length; itemIndex++) {
     var itemName = Object.keys(cart[itemIndex])[0];
     var price = cart[itemIndex][itemName];
+    restructured.push({
+      item: itemName,
+      price: price
+    });
   }
 }
 
