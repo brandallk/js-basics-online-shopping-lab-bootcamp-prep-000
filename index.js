@@ -1,5 +1,14 @@
 var cart = [];
 
+function getCart() {
+ return cart;
+}
+
+function setCart(c) {
+  cart = c;
+  return cart;
+}
+
 // Modify the cart's item objects to make them easier to work with
 function getModifiedCart(cart) {
   var modified = [];
@@ -12,15 +21,6 @@ function getModifiedCart(cart) {
     );
   }
   return modified;
-}
-
-function getCart() {
- return cart;
-}
-
-function setCart(c) {
-  cart = c;
-  return cart;
 }
 
 function addToCart(item) {
@@ -37,7 +37,7 @@ function viewCart() {
   } else {
     var tally = "In your cart, you have ";
     var lastIndex = cart.length - 1;
-    var modCart = modifyCart(cart);
+    var modCart = getModifiedCart(cart);
     for (let i = 0; i < cart.length; i++) {
       var item = modCart[i].item;
       var price = modCart[i].price;
@@ -58,13 +58,13 @@ function viewCart() {
 }
 
 function total() {
-  return modifyCart(cart).reduce( function(acc, item) {
+  return getModifiedCart(cart).reduce( function(acc, item) {
     return acc + item.price; 
   }, 0);
 }
 
 function removeFromCart(item) {
-  var cartItems = modifyCart(cart).map( function(item) {
+  var cartItems = getModifiedCart(cart).map( function(item) {
     return item.item;
   });
   var itemIndex = cartItems.indexOf(item);
