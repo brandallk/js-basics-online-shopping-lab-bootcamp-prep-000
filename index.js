@@ -1,5 +1,6 @@
 var cart = [];
 
+// Modify the cart's item objects to make them easier to work with
 function restructuredCart(cart) {
   var restructured = [];
   for (let itemIndex = 0; itemIndex < cart.length; itemIndex++) {
