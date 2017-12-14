@@ -37,10 +37,10 @@ function viewCart() {
   } else {
     var tally = "In your cart, you have ";
     var lastIndex = cart.length - 1;
-    var resCart = restructureCart(cart);
+    var modCart = modifyCart(cart);
     for (let i = 0; i < cart.length; i++) {
-      var item = resCart[i].item;
-      var price = resCart[i].price;
+      var item = modCart[i].item;
+      var price = modCart[i].price;
       if (i === lastIndex) {
         tally += `${item} at $${price}.`;
       } else if (i === lastIndex - 1) {
@@ -58,7 +58,7 @@ function viewCart() {
 }
 
 function total() {
-  return restructureCart(cart).reduce( function(acc, item) {
+  return modifyCart(cart).reduce( function(acc, item) {
     return acc + item.price; 
   }, 0);
 }
