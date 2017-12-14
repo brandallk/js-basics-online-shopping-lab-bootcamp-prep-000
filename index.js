@@ -34,7 +34,7 @@ function viewCart() {
       } else if (itemIndex === lastIndex - 1) {
         tally += `${itemName} at $${price}, and`;
       } else {
-        tally += `${itemName} at $${price}, `.;
+        tally += `${itemName} at $${price}, `;
       }
     }
     
