@@ -22,7 +22,6 @@ function viewCart() {
     console.log("Your shopping cart is empty.");
   } else {
     var tally = "In your cart, you have ";
-    var items = Object.keys(cart);
     var lastIndex = cart.length - 1;
     for (let itemIndex = 0; itemIndex < cart.length; itemIndex++) {
       var itemName = Object.keys(cart[itemIndex])[0];
