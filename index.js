@@ -24,11 +24,9 @@ function viewCart() {
     var tally = "In your cart, you have ";
     var items = Object.keys(cart);
     var lastIndex = cart.length - 1;
-    
     for (let itemIndex = 0; itemIndex < cart.length; itemIndex++) {
       var itemName = Object.keys(cart[itemIndex])[0];
       var price = cart[itemIndex][itemName];
-      
       if (itemIndex === lastIndex) {
         tally += `${itemName} at $${price}.`;
       } else if (itemIndex === lastIndex - 1) {
@@ -37,7 +35,6 @@ function viewCart() {
         tally += `${itemName} at $${price}, `;
       }
     }
-    
     console.log(tally);
   }
 }
