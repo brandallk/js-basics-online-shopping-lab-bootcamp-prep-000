@@ -38,6 +38,9 @@ function viewCart() {
   }
 }
 
+addToCart('apple');
+viewCart();
+
 function total() {
   // write your code here
 }
