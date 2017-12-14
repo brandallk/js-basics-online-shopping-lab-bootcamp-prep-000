@@ -77,7 +77,9 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  if (typeof cardNumber === 'undefined')
+  if (typeof cardNumber === 'undefined') {
+    console.log()
+  }
 }
 
 
