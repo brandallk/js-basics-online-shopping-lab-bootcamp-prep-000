@@ -19,6 +19,20 @@ function addToCart(item) {
 
 function viewCart() {
   if (cart.length === 0) {
+    console.log("Your shopping cart is empty.");
+  } else {
+    var tally = "In your cart, you have ";
+    var items = cart.keys();
+    var lastIndex = cart.length - 1;
+    
+    for (let itemIndex = 0; itemIndex < cart.length; itemIndex++) {
+      tally += `${items[itemIndex]} at $${cart[items[itemIndex]]}`;
+      if (itemIndex === lastIndex) {
+        tally += ".";
+      } else {
+        tally += ", ";
+      }
+    }
     
   }
 }
