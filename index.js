@@ -37,20 +37,20 @@ function viewCart() {
   } else {
     var tally = "In your cart, you have ";
     var lastIndex = cart.length - 1;
-    for (let itemIndex = 0; itemIndex < cart.length; itemIndex++) {
-      var cart = restructureCart(cart);
-      var itemName = cart[itemIndex].item;
-      var price = cart[itemIndex].price;
-      if (itemIndex === lastIndex) {
-        tally += `${itemName} at $${price}.`;
-      } else if (itemIndex === lastIndex - 1) {
+    var resCart = restructureCart(cart);
+    for (let i = 0; i < cart.length; i++) {
+      var item = resCart[i].item;
+      var price = resCart[i].price;
+      if (i === lastIndex) {
+        tally += `${item} at $${price}.`;
+      } else if (i === lastIndex - 1) {
         if (cart.length === 2) {
-          tally += `${itemName} at $${price} and `;
+          tally += `${item} at $${price} and `;
         } else {
-          tally += `${itemName} at $${price}, and `;
+          tally += `${item} at $${price}, and `;
         }
       } else {
-        tally += `${itemName} at $${price}, `;
+        tally += `${item} at $${price}, `;
       }
     }
     console.log(tally);
