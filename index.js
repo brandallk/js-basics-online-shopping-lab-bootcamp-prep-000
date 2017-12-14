@@ -67,7 +67,8 @@ function removeFromCart(item) {
   var cartItems = modifyCart(cart).map( function(item) {
     return item.item;
   });
-  if ((var index = cartItems.indexOf(item)) !== -1) {
+  var index = cartItems.indexOf(item);
+  if (index !== -1) {
     cart.splice(index, 1);
   } else {
     console.log("That item is not in your cart.");
