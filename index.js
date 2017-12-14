@@ -55,11 +55,6 @@ function restructuredCart(cart) {
   return restructured;
 }
 
-addToCart('apple');
-addToCart('pear');
-addToCart('orange');
-console.log(restructuredCart(cart));
-
 function total() {
   cart.reduce( function(acc, item) {
     return acc; 
