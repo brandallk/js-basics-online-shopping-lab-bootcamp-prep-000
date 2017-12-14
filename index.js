@@ -7,7 +7,7 @@ function modifyCart(cart) {
     var item = Object.keys(cart[i])[0];
     var price = cart[i][item];
     modified.push(
-      { item: itemName,
+      { item: item,
         price: price }
     );
   }
