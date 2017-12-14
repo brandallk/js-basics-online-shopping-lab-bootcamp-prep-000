@@ -68,7 +68,7 @@ function removeFromCart(item) {
     return item.item;
   });
   var index = cartItems.indexOf(item);
-  if (index !== -1) {
+  if (cartItems.contains(item)) {
     cart.splice(index, 1);
   } else {
     console.log("That item is not in your cart.");
