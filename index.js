@@ -1,7 +1,7 @@
 var cart = [];
 
 // Modify the cart's item objects to make them easier to work with
-function modifyCart(cart) {
+function getModifiedCart(cart) {
   var modified = [];
   for (let i = 0; i < cart.length; i++) {
     var item = Object.keys(cart[i])[0];
