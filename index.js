@@ -26,7 +26,7 @@ function viewCart() {
     var lastIndex = cart.length - 1;
     
     for (let itemIndex = 0; itemIndex < cart.length; itemIndex++) {
-      tally += `${cart[itemIndex]} at $${cart[itemIndex].price}`;
+      tally += `${Object.keys(cart[itemIndex])[0]} at $${cart[itemIndex].price}`;
       if (itemIndex === lastIndex) {
         tally += ".";
       } else {
