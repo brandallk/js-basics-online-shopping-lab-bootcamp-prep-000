@@ -42,8 +42,17 @@ function viewCart() {
   }
 }
 
+function restructuredCart(cart) {
+  for (let itemIndex = 0; itemIndex < cart.length; itemIndex++) {
+    var itemName = Object.keys(cart[itemIndex])[0];
+    var price = cart[itemIndex][itemName];
+  }
+}
+
 function total() {
-  // write your code here
+  cart.reduce( function(acc, item) {
+    return acc; 
+  });
 }
 
 function removeFromCart(item) {
