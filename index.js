@@ -41,6 +41,7 @@ function viewCart() {
 }
 
 addToCart('apple');
+addToCart('pear');
 viewCart();
 
 function total() {
